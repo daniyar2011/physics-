@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение задач по физике</title>
+</head>
+<body>
+    <h1>Выберите задачу по физике</h1>
+
+    <form method="POST">
+        <label for="formula">Формула:</label>
+        <select name="formula" id="formula">
+            <option value=""> Выберите формулу </option>
+            <option value="F = m * g">F = m × g</option>
+            <option value="a = F / m">a = F / m</option>
+            <option value="m = F / g">m = F / g</option>
+            <option value="E = 0.5 * m * v^2">E = 0,5mv^2</option>
+
+        </select>
+        <br><br>
+
+
+        <div>
+            <label>Масса (кг):</label><input type="text" name="massa"><br> <br>
+            <label>Ускорение (Н/кг):</label><input type="text" name="uskorenie"><br> <br>
+            <label>Сила (Н):</label><input type="text" name="sila"><br> <br>
+             <label>Обьём (м^3):</label><input type="text" name="obiom"><br> <br>
+            <label>Скорось (км/ч):</label><input type="text" name="skorost"><br> <br>
+
+        </div>
+        <br>
+        <input type="submit" value="Рассчитать">
+    </form>
+
+    {% if result %}
+        <h2>Результат: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
